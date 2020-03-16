@@ -1,0 +1,53 @@
+/* 悬浮-阴影 */
+.shadow-hover:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 悬浮-蓝色连接 */
+.blue-link-hover {
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.blue-link-hover:hover {
+  color: #5cb6ff !important;
+}
+
+/* 悬浮-灰色背景 */
+.gray-back-hover {
+  cursor: pointer;
+  transition: color 0.15s linear;
+}
+.gray-back-hover:hover {
+  background: rgba(240, 243, 245, 0.8);
+}
+
+/* 滑动-固定 */
+.fixed-scroll {
+  position: fixed;
+}
+
+/* 省略-单行 */
+.single-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 省略-三行 */
+.three-line-ellipsis {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* 动画上移-分页 */
+.animate-up-paginate {
+  .btn-prev, .btn-next, ul .number {
+    transition: all linear 0.1s;
+  }
+  .btn-prev:hover, .btn-next:hover, ul .number:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+}
