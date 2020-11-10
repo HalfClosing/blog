@@ -1,5 +1,19 @@
 <?php
 
+
+@$http_origin = $_SERVER['HTTP_ORIGIN'];
+if(
+  $http_origin === 'http://ding-jiaotou.yugoo.com' 
+){
+  header("Access-Control-Allow-Origin: $http_origin");
+}
+header('Vary: Origin');
+header('Access-Control-Allow-Credentials: true');
+header('Access-Control-Allow-Headers: X-Requested-With,Content-Type,Authorization');
+if($_SERVER['REQUEST_METHOD'] === 'OPTIONS'){
+  http_response_code(204);
+  exit();
+}
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
